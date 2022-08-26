@@ -1,4 +1,4 @@
-# Q-SYS-CyberPower-PDU41004-PDU81004
+# Q-SYS-CyberPower-PDU41004-PDU81004 - SNMP
 - CyberPower PDU41004 Networked PDU - SNMP
   - Written by Glen Gorton 26/08/2020
 
