@@ -9,6 +9,9 @@
 -- Commands that send strings (eg. Name, Location, Contact) will not accept 'spaces' between words/characters.
 -- ENVIROSENSOR Temperature and Humidity cannot be obtained via telnet commands in firmware v1.2.0. (Requires SNMP v1 or v3 queries/traps)
 
+## 7th December 2022
+-- PDU41004 model# is not capable of reading Watts. Added more "PowerWatts" string checks to avoid "attempt to compare number with nil" error within the 'OutletDrawingPowerStatus()' function.
+
 ## 2nd Decemeber 2022
 -- 'Restart Script' Control (Trigger) added to script. Found SNMP requests would not work if the 'Connect' boolean was pressed, Initializing the script. As script restart is required.
 -- 'Script Start' input pin exposed on the text controller.
