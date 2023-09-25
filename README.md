@@ -9,6 +9,11 @@
 -- Commands that send strings (eg. Name, Location, Contact) will not accept 'spaces' between words/characters.
 -- ENVIROSENSOR Temperature and Humidity cannot be obtained via telnet commands in firmware v1.2.0. (Requires SNMP v1 or v3 queries/traps)
 
+## 26th September 2023
+-- Some changes made to the snmp_session.ErrorHandler as QSC have advised there are six possible errors that can be returned: "Timed out", "Send Failed", "Sec Error", "SNMP Error", "No Such Instance" and "No Such Object"
+-- Created 'compromised' Event Logging for the errors: "Send Failed", "Sec Error", "No Such Instance" and "No Such Object"
+-- CyberPower have also advised that the sensor on the outlets that provides the active Load (amps) and Power (watts) is only accurate if the load is above 1A/100Watts. This may have an affect in the OutletDrawingPowerStatus() function.
+
 ## 13th September 2023
 -- QSC have fixed (with Designer v9.9.0) the snmp_session.ErrorHandler which will now provide a response if there is a NULL response. (ie. unsupported OID sent to device).
 -- Designer v9.4.4 to v9.8.2 will crash (when emulating) or a running Core Design will eventually restart because it does not support a NULL response. Versions prior to v9.4.4 worked!
